@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>SideNav</title>
+</head>
+
+<body class="silver">
+
+
+    <div class="container">
+        <h1 class="red-text center navbar_h1">Sidenav</h1>
+        <div class="divider"></div>
+        <p class="black-text text-lighten-1">
+            This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you
+            want
+            to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen
+            navigation, you have to use two copies of the same UL.
+        </p>
+        <p class="black-text text-lighten-1" style="font-weight: bold;">
+            Please note that the sidenav HTML should not be contained within the navbar HTML.
+        </p>
+
+        <button href="#" data-target="slide-out" class="sidenav-trigger green white-text text-darken-4"
+            style="border-radius: 10px; height: 50PX; width: fit-content; font-weight: bold;">SIDE NAV DEMO</button>
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="Images/pexels-photo-2860132.jpeg">
+                    </div>
+                    <a href="#!"><img class="circle" src="Images/pexels-photo-2860132.jpeg"></a>
+                    <a href="#!"><span class="white-text name">Cristopher Espina</span></a>
+                    <a href="#!"><span class="white-text email">espinaednalyn0124@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+        <h1 class="green-text center navbar_h1">Initialization</h1>
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+        });
+        <h1 class="green-text center navbar_h1">Options</h1>
+
+        <table class="container striped">
+            <thead class="green lighten-2">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>edge</td>
+                    <td>String</td>
+                    <td>'left'</td>
+                    <td>Side of screen on which Sidenav appears.</td>
+                </tr>
+                <tr>
+                    <td>draggable</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                    <td>Allow swipe gestures to open/close Sidenav.</td>
+                </tr>
+                <tr>
+                    <td>inDuration</td>
+                    <td>Number</td>
+                    <td>250</td>
+                    <td>Length in ms of enter transition.</td>
+                </tr>
+                <tr>
+                    <td>outDuration</td>
+                    <td>Number</td>
+                    <td>200</td>
+                    <td>Length in ms of exit transition.</td>
+                </tr>
+                <tr>
+                    <td>onOpenStart</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function called when sidenav starts entering.</td>
+                </tr>
+                <tr>
+                    <td>onOpenEnd</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function called when sidenav finishes entering.</td>
+                </tr>
+                <tr>
+                    <td>onCloseStart</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function called when sidenav starts exiting.</td>
+                </tr>
+                <tr>
+                    <td>onCloseEnd</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function called when sidenav finishes exiting.</td>
+                </tr>
+                <tr>
+                    <td>preventScrolling</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                    <td>Prevent page from scrolling while sidenav is open.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="green-text center navbar_h1">Methods</h1>
+
+        <blockquote>
+            <p class="black-text text-lighten-1">
+                Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get
+                the plugin instance like this: <br> <br>
+            </p>
+            var instance = M.Sidenav.getInstance(elem); <br>
+            /* jQuery Method Calls <br>
+            You can still use the old jQuery plugin method calls. <br>
+            But you won't be able to access instance properties. <br>
+
+            $('.sidenav').sidenav('methodName'); <br>
+            $('.sidenav').sidenav('methodName', paramName); <br>
+            */
+        </blockquote>
+        <h5 class="black-text center navbar_h1">.open();</h5>
+        <p class="black-text text-lighten-1">
+            Opens Sidenav. <br> <br>
+        </p>
+        <h5 class="black-text center navbar_h1">.close();</h5>
+        <p class="black-text text-lighten-1">
+            Closes Sidenav. <br> <br>
+        </p>
+        <h5 class="black-text center navbar_h1">.destroy();</h5>
+        <p class="black-text text-lighten-1">
+            Destroy plugin instance and teardown <br> <br>
+        </p>
+
+        <h1 class="green-text center navbar_h1">Properties</h1>
+        <table class="container striped">
+            <thead class="green lighten-2">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>el</td>
+                    <td>Element</td>
+                    <td>The DOM element the plugin was initialized with.</td>
+                </tr>
+                <tr>
+                    <td>options</td>
+                    <td>Object</td>
+                    <td>The options the instance was initialized with.</td>
+                </tr>
+                <tr>
+                    <td>isOpen</td>
+                    <td>Boolean</td>
+                    <td>Describes open/close state of Sidenav.</td>
+                </tr>
+                <tr>
+                    <td>isFixed</td>
+                    <td>Boolean</td>
+                    <td>Describes if sidenav is fixed.</td>
+                </tr>
+                <tr>
+                    <td>isDragged</td>
+                    <td>Boolean</td>
+                    <td>Describes if Sidenav is being dragged.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1 class="green-text center navbar_h1">Close Trigger</h1>
+        <p class="black-text text-lighten-1">
+            Add the class .sidenav-close to an element inside the sidenav and any click event on that element will cause
+            the sidenav to close. This is useful in Single Page Apps where the page does not refresh on link clicks.
+        </p>
+
+        <h1 class="green-text center navbar_h1">Variations</h1>
+        <p class="black-text text-lighten-1">
+            Here are some useful variations and additional elements you can add to your sidebar.
+        </p>
+        <h2 class="black-text center navbar_h1">Dropdown HTML Structure</h2>
+        <p class="black-text text-lighten-1">
+            Add collapsible menus to your sidebar.
+        </p>
+        <h2 class="black-text center navbar_h1">Fullscreen HTML Structure</h2>
+        <p class="black-text text-lighten-1">
+            If you want the menu to be accessible on all screensizes you just have to add a simple helper class
+            show-on-large to the .sidenav-trigger.
+        </p>
+        <h2 class="black-text center navbar_h1">Fixed HTML Structure</h2>
+        <p class="black-text text-lighten-1">
+            Add the class sidenav-fixed to have the sidenav be fixed and open on large screens and hides to the regular
+            functionality on smaller screens. Our sidenav on the left is an example of this.
+        </p>
+        <p class="black-text text-lighten-1">
+            If you are planning on using this you will have to offset your content by the width of the side menu. Place
+            the padding on where the offset content will be, which in our case is in header, main and footer.
+        </p>
+        header, main, footer { <br>
+            padding-left: 300px;<br>
+          }<br><br>
+      
+          @media only screen and (max-width : 992px) {<br>
+            header, main, footer {<br>
+              padding-left: 0;<br>
+            }<br>
+          }
+    </div>
+
+
+
+
+    <div style="height: 1000px;"></div>
+    <!-- Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script>
+        $(".dropdown-trigger").dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+
+        
+    </script>
+</body>
+
+</html>

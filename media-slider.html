@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>(Media) Material Box, Slider with initialization and Option</title>
+</head>
+
+<body>
+
+    <h2 class="red-text text-lighten-1 center">Media</h2>
+    <div class="divider"></div>
+    <div class="container">
+        <p class="black-text text-lighten-2">
+            Media components include things that have to do with large media objects like Images, Video, Audio, etc.
+        </p>
+
+        <h3 class="red-text text-lighten-1">Material Box</h3>
+        <p class="black-text text-lighten-2">
+            Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that
+            can be enlarged, Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss
+            the image, the user can either click on the image again, scroll away, or press the ESC key.
+        </p>
+        <img class="materialboxed responsive-img" src="Images/pexels-photo-2860132.jpeg" alt=""
+            data-caption="Jowa Ko to">
+        <p class="black-text black-text-2">
+            Creating the above image with the effect is as simple as adding a materialboxed class to the image tag.
+        </p>
+        <h3 class="green-text">Initialization</h3>
+        <h4 class="black-text text-lighten-1">
+            Options
+        </h4>
+        <table class="container striped">
+
+            <thead class="green lighten-2">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>inDuration</td>
+                    <td>Number</td>
+                    <td>275</td>
+                    <td>Transition in duration in milliseconds.</td>
+                </tr>
+                <tr>
+                    <td>outDuration</td>
+                    <td>Number</td>
+                    <td>200</td>
+                    <td>Transition out duration in milliseconds.</td>
+                </tr>
+                <tr>
+                    <td>onOpenStart</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Callback function called before materialbox is opened.</td>
+                </tr>
+                <tr>
+                    <td>onOpenEnd</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Callback function called after materialbox is opened.</td>
+                </tr>
+                <tr>
+                    <td>onCloseStart</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Callback function called before materialbox is closed.</td>
+                </tr>
+                <tr>
+                    <td>onCloseEnd</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Callback function called after materialbox is closed.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <h4 class="black-text text-lighten-1">Methods</h4>
+        <blockquote>
+            <p class="black-text black-text-2">Because jQuery is no longer a dependency, all the methods are called on
+                the plugin instance. You can get the plugin instance like this:</p>
+        </blockquote>
+
+        <h5>.open();</h5>
+        <h5>.close();</h5>
+        <h5>.destroy();</h5>
+        <br>
+        <h4 class="black-text text-lighten-1">Properties</h4>
+        <table class="container striped">
+            <thead class="green lighten-2">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>el</td>
+                    <td>Element</td>
+                    <td>The DOM element the plugin was initialized with.</td>
+                </tr>
+                <tr>
+                    <td>options</td>
+                    <td>Object</td>
+                    <td>The options the instance was initialized with.</td>
+                </tr>
+                <tr>
+                    <td>overlayActive</td>
+                    <td>Boolean</td>
+                    <td>If the materialbox overlay is showing.</td>
+                </tr>
+                <tr>
+                    <td>doneAnimating</td>
+                    <td>Boolean</td>
+                    <td>If the carousel is no longer being animated.</td>
+                </tr>
+                <tr>
+                    <td>cantion</td>
+                    <td>string</td>
+                    <td>Caption if specified.</td>
+                </tr>
+                <tr>
+                    <td>originalWidth</td>
+                    <td>Number</td>
+                    <td>Original width of image.</td>
+                </tr>
+                <tr>
+                    <td>originalHeight</td>
+                    <td>Number</td>
+                    <td>Original height of image.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="black-text text-lighten-1">Captions</h4>
+        <p class="black-text black-text-2">It is very easy to add a short caption to your photo. Just add the caption as
+            a data-caption attribute.</p>
+        <br>
+        <h3 class="red-text text-lighten-1">Slider</h3>
+        <p class="black-text text-lighten-2">
+            Our slider is a simple and elegant image carousel. You can also have captions that will be transitioned on
+            their own depending on their alignment. You can also have indicators that show up on the bottom of the
+            slider.
+        </p>
+        <div class="slider">
+            <ul class="slides center-align">
+                <li>
+                    <img src="Images/img1.jpg" alt="" style="width: 80%;">
+                    <div class="caption center-align">
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <h3>This is our big Tagline</h3>
+                        <h5 class="light white-text">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/img2.jpg" alt="" style="width: 80%;" class="center">
+                    <div class="caption left-align">
+                        <h3>Left Aligned Captione</h3>
+                        <h5 class="light white-text">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/img3.jpg" alt="" style="width: 80%;" class="center">
+                    <div class="caption right-align">
+                        <h3>Right Aligned Caption</h3>
+                        <h5 class="light white-text">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/img4.jpg" alt="" style="width: 80%;" class="center">
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light white-text">Here's our small slogan.</h5>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <h4 class="black-text text-lighten-1">Initialization</h4>
+        $(document).ready(function(){
+            $('.slider').slider();
+          });
+
+          <h4 class="black-text text-lighten-1">Options</h4>
+          <table class="container responsive-table highlight">
+            <thead class="green lighten-2">
+                    <tr>
+                        <th class="black-text text-lighten-1"> Name</th>
+                        <th class="black-text text-lighten-1"> Type</th>
+                        <th class="black-text text-lighten-1"> Default</th>
+                        <th class="black-text text-lighten-1"> Description</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="black-text text-lighten-4" >indicators</td>
+                    <td class="black-text text-lighten-4">Boolean</td>
+                    <td class="black-text text-lighten-4">true</td>
+                    <td class="black-text text-lighten-4">Set to false to hide slide indicators</td>
+                    
+                </tr>
+                <tr>
+                    <td class="black-text text-lighten-4" > height</td>
+                    <td class="black-text text-lighten-4">Number</td>
+                    <td class="black-text text-lighten-4">400</td>
+                    <td class="black-text text-lighten-4">set height of slider</td>
+                    
+                </tr>
+                <tr>
+                    <td class="black-text text-lighten-4" > duration</td>
+                    <td class="black-text text-lighten-4">Number</td>
+                    <td class="black-text text-lighten-4">500</td>
+                    <td class="black-text text-lighten-4">set the duration of the transition animation in ms.</td>
+                    
+                </tr>
+                <tr>
+                    <td class="black-text text-lighten-4" > interval</td>
+                    <td class="black-text text-lighten-4">Number</td>
+                    <td class="black-text text-lighten-4">6000</td>
+                    <td class="black-text text-lighten-4">set the duration between transitions in ms.</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 class="black-text text-lighten-1">Methods</h4>
+        <p class="black-text text-lighten-2">
+            We have methods to pause, start, move to next and move to previous slide.
+        </p>
+
+        <blockquote>
+            <p class="black-text text-lighten-2">
+                Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this:
+            </p>
+        </blockquote>
+        <h4 class="black-text text-lighten-1">.pause();</h4>
+        <p class="black-text text-lighten-2">
+            Pause slider autoslide
+        </p>
+        <h4 class="black-text text-lighten-1">.start();</h4>
+        <p class="black-text text-lighten-2">
+            Start slider autoslide
+        </p>
+        <h4 class="black-text text-lighten-1">.next();</h4>
+        <p class="black-text text-lighten-2">
+            Move to next slider
+        </p>
+        <h4 class="black-text text-lighten-1">.prev();</h4>
+        <p class="black-text text-lighten-2">
+            Move to prev slider
+        </p>
+        <h4 class="black-text text-lighten-1">.destroy();</h4>
+        <p class="black-text text-lighten-2">
+            Destroy plugin instance and teardown
+        </p>
+        <h4 class="black-text text-lighten-1">Properties</h4>
+        <table class="container responsive-table highlight ">
+            <thead class="green lighten-2">
+                    <tr>
+                        <th class="black-text text-lighten-1"> Name</th>
+                        <th class="black-text text-lighten-1"> Type</th>
+                        <th class="black-text text-lighten-1"> Description</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="black-text text-lighten-4" >el</td>
+                    <td class="black-text text-lighten-4">Element</td>
+                    <td class="black-text text-lighten-4">The DOM element the plugin was initialized with.</td>
+                    
+                </tr>
+                <tr>
+                    <td class="black-text text-lighten-4" >options</td>
+                    <td class="black-text text-lighten-4">Object</td>
+                    <td class="black-text text-lighten-4">The options the instance was initialized with</td>
+                    
+                </tr>
+                <tr>
+                    <td class="black-text text-lighten-4" >activeIndex</td>
+                    <td class="black-text text-lighten-4">Number</td>
+                    <td class="black-text text-lighten-4">Index of Current slide</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="black-text text-lighten-1">Fullscreen Slider</h4>
+        <p class="black-text text-lighten-2">
+            You can easliy make this slider a fullscreen slider by adding the class fullscreen to the slider div. Here's a quick demo.
+        </p>
+
+        <a href="https://materializecss.com/fullscreen-slider-demo.html" class="btn-demo">OPEN DEMO</a>
+    </div>
+
+
+
+
+
+    <div style="height: 1000px;"></div>
+    <!-- Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.materialboxed').materialbox({
+                inDuration: 1000,
+                outDuration: 1000
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider();
+
+        });
+    </script>
+</body>
+
+</html>

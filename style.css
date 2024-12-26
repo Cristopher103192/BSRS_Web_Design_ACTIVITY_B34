@@ -1,0 +1,60 @@
+
+h1, h2, h3, h4, h5, h6, p{
+    font-weight: 150;
+}
+
+p{
+    font-size: medium;
+}
+
+td{
+   /*font-weight: bolder;*/
+   font-style: italic;
+
+}
+
+
+
+.tb_table{
+    background-color: rebeccapurple ;
+   border: solid;
+   border-width: 3;
+   border-color: black;
+}
+
+.st{
+ background-color: rebeccapurple;
+ text-align: center;
+}
+
+.navbar_h1{
+    text-align: left;
+
+}
+
+.row_col{
+    background-color: green;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-right: 1px;
+}
+
+.stock-link:hover{
+    text-decoration: underline;
+}
+
+.stock-link-menu:hover{
+    text-decoration: underline;
+    border-style: solid;
+    border-left-color: red;
+    border-left-width: 2px;
+}
+
+.btn-demo{
+    background-color: green;
+    height: 50px;
+    width: fit-content;
+ color:  white;
+}

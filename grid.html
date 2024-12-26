@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Grid</title>
+</head>
+
+<body>
+
+    <h1 class="center green-text text-lighten-1">Grid</h1>
+    <div class="divider"></div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s9">
+                <p> We are using a standard 12 column fluid responsive grid system. The grid helps you layout your page
+                    in an
+                    ordered, easy fashion.</p>
+                <br>
+                <h3 class="indigo-text text-darken-4">Container</h3>
+                <p>The container class is not strictly part of the grid but is important in laying out content. It
+                    allows you to
+                    center your page content. The container class is set to ~70% of the window width. It helps you
+                    center and
+                    contain your page content. We use the container to contain our body content.</p>
+                <h5 class="indigo-text text-darken-4">Demo</h5>
+                <p>Try the button below to see what the page looks like without containers.</p>
+
+                <a href="" class="btn waves-effect waves-light">Turn Off Container</a>
+                <br><br>
+                <img src="Images/img5.PNG" alt="" class="responsive-img">
+                <p>To add a container just put your content inside a <'div> tag with a container class. Here's an
+                        example of how your page might be set up.</p>
+                <h3 class="indigo-text text-darken-4">Introduction</h3>
+                <p>Take a look at this section to quickly understand how the grid works!</p>
+                <h5 class="indigo-text text-darken-4">12 Columns</h5>
+                <p>Our standard grid has 12 columns. No matter the size of the browser, each of these columns will
+                    always have an equal width.</p>
+
+                <div class="row">
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">1</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">2</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">3</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">4</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">5</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">6</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">7</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">8</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">9</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">10</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">11</p>
+                    </div>
+                    <div class="col s12 m3 l6 xl1 card-panel green white-text">
+                        <p class="center">12</p>
+                    </div>
+
+                    <p>To get a feel of how the grid is used in HTML, take a look at the code below which will produce a
+                        similar result to the one above.</p>
+                    <p>Note: For now, just know that the s1 stands for small-1 which in plain English means "1 column on
+                        small screens".</p>
+                    <br>
+                    <h5 class="indigo-text text-darken-4">Columns live inside Rows</h5>
+                    <p>Remember when you are creating your layout that all columns must be contained inside a row and
+                        that you must add the col class to your inner divs to make them into columns</p>
+                    <div class="row">
+                        <div class="col s12 card-panel green white-text">
+                            <p class="center">This div is 12-columns wide on all screen sizes</p>
+                        </div>
+                        <div class="col s6 card-panel green white-text">
+                            <p class="center">6-columns (one-half)</p>
+                        </div>
+                        <div class="col s6 card-panel green white-text">
+                            <p class="center">6-columns (one-half)</p>
+                        </div>
+                    </div>
+                    <h3 class="indigo-text text-darken-4">Offsets</h3>
+                    <p>To offset, simply add offset-s2 to the class where s signifies the screen class-prefix (s =
+                        small, m = medium, l = large) and the number after is the number of columns you want to offset
+                        by.</p>
+                    <div class="row">
+                        <div class="col s12 card-panel green white-text">
+                            <p class="flow-text">This div is 12-columns wide on all screen sizes</p>
+                        </div>
+                        <div class="col s6 offset-s6 card-panel green white-text">
+                            <p class="flow-text">6-columns (offset-by-6)</p>
+                        </div>
+                    </div>
+
+                    <h3 class="indigo-text text-darken-4">Push and Pull</h3>
+                    <p>You can easily change the order of your columns with push and pull. Simply add push-s2 or pull-s2
+                        to the class where s signifies the screen class-prefix (s = small, m = medium, l = large) and
+                        the number after is the number of columns you want to push or pull by.</p>
+
+                    <div class="row">
+                        <div class="col s7 push-s5 card-panel green white-text">
+                            <p class="flow-text">This div is 7-columns wide on pushed to the
+                                right by 5-columns.</p>
+                        </div>
+                        <div class="col s5 pull-s7 card-panel green white-text">
+                            <p class="flow-text">5-columns wide pulled to the left by
+                                7-columns.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="indigo-text text-darken-4">Creating Layouts</h3>
+                    <p>Here we will show you how to create some commonly used layouts with our grid system. Hopefully
+                        these will get you more comfortable with laying out elements. To keep these demos simple, the
+                        ones here will not be responsive.</p>
+
+                    <div class="row">
+                        <div class="col s6 transparent black-text">
+                            <h5 class="indigo-text text-darken-4">Section</h5>
+                            <p>The section class is used for simple top and bottom padding. Just add
+                                the section class
+                                to your div's containing large blocks of content.</p>
+                        </div>
+                        <div class="col s6 transparent black-text">
+                            <h5 class="indigo-text text-darken-4">Divider</h5>
+                            <p>Dividers are 1 pixel lines that help break up your content. Just add the divider to a div
+                                in between your content.</p>
+                        </div>
+                    </div>
+                    <h5 class="indigo-text text-darken-4">Example Sections and Dividers</h5>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h5 class="indigo-text text-darken-4">Section 1</h5>
+                        <p>Stuff</p>
+                    </div>
+
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h5 class="indigo-text text-darken-4">Section 2</h5>
+                        <p>Stuff</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h5 class="indigo-text text-darken-4">Section 3</h5>
+                        <p>Stuff</p>
+                    </div>
+                    <h5 class="indigo-text text-darken-4">Example Promotion Table</h5>
+                    <p>If we want 3 divs that are equal size, we define the divs with a width of 4-columns, as 4+4+4
+                        nicely adds up to 12. Inside those divs, we can put our content. Take our front page content for
+                        example. We've modified it slightly for the sake of this example.</p>
+
+                    <div class="row">
+
+                        <div class="col s4 center">
+                            <i class="large material-icons green-text">flash_on</i>
+                            <h5 class="indigo-text text-darken-4">Speeds up <br>development</h5>
+                            <p>We did most of the heavy lifting for you to provide a default stylings that incorporate
+                                our custom components.</p>
+                        </div>
+                        <div class="col s4 center">
+                            <i class="large material-icons green-text">people</i>
+                            <h5 class="indigo-text text-darken-4">User Experience <br>Focused</h5>
+                            <p>By utilizing elements and principles of Material Design, we were able to create a
+                                framework that focuses on User Experience.</p>
+                        </div>
+                        <div class="col s4 center">
+                            <i class="large material-icons green-text">settings</i>
+                            <h5 class="indigo-text text-darken-4">Easy to work with</h5>
+                            <p>We have provided detailed documentation as well as specific code examples to help new
+                                users get started.</p>
+                        </div>
+
+                    </div>
+                    <h5 class="indigo-text text-darken-4">Example Side Navigation Layout</h5>
+                    <p>You can see how easy it is to create layouts using the grid system. Just remember to make sure
+                        your column numbers add up to 12 for an even layout.</p>
+                    <img src="Images/img7.PNG" alt="" class="responsive-img">
+
+                    <h3 class="indigo-text text-darken-4">Creating Responsive Layouts</h3>
+                    <p>Above we showed you how to layout elements using our grid system. Now we'll show you how to
+                        design your layouts so that they look great on all screen sizes.</p>
+
+                    <h5 class="indigo-text text-darken-4">Screen Sizes</h5>
+                    <table class="responsive-table highlight st">
+                        <thead>
+                            <tr>
+                                <th class="yellow-text text-lighten-1 center"></th>
+                                <th class="yellow-text text-lighten-1 center">Mobile Devices
+                                    <= 600px</th>
+                                <th class="yellow-text text-lighten-1 center">Tablet Devices
+                                    > 600px</th>
+                                <th class="yellow-text text-lighten-1 center">Desktop Devices
+                                    > 992px</th>
+                                <th class="yellow-text text-lighten-1 center">Large Desktop Devices
+                                    > 1200px</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="teal-text text-lighten-4 center">Class Prefix</td>
+                                <td class="teal-text text-lighten-4 center">.s</td>
+                                <td class="teal-text text-lighten-4 center">.m</td>
+                                <td class="teal-text text-lighten-4 center">.l</td>
+                                <td class="teal-text text-lighten-4 center">.xl</td>
+                            </tr>
+                            <tr>
+                                <td class="teal-text text-lighten-4 center">Container Width</td>
+                                <td class="teal-text text-lighten-4 center">90%</td>
+                                <td class="teal-text text-lighten-4 center">85%</td>
+                                <td class="teal-text text-lighten-4 center">70%</td>
+                                <td class="teal-text text-lighten-4 center">70%</td>
+                            </tr>
+                            <tr>
+                                <td class="teal-text text-lighten-4 center">Number of Columns</td>
+                                <td class="teal-text text-lighten-4 center">12</td>
+                                <td class="teal-text text-lighten-4 center">12</td>
+                                <td class="teal-text text-lighten-4 center">12</td>
+                                <td class="teal-text text-lighten-4 center">12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="indigo-text text-darken-4">Adding Responsiveness</h5>
+                    <p>In the previous examples, we only defined the size for small screens using "col s12". This is
+                        fine if we want a fixed layout since the rules propagate upwards. By just saying s12, we are
+                        essentially saying "col s12 m12 l12". But by explicitly defining the size we can make our
+                        website more responsive.</p>
+                    <div class="row">
+                        <div class="grid-example col s12 card-panel green white-text">
+                            <P class="flow-text">I am always full-width (col s12)</P>
+                        </div>
+                        <div class="grid-example col s12 m6 card-panel green white-text">
+                            <P class="flow-text">I am full-width on mobile (col s12 m6)</P>
+                        </div>
+                    </div>
+
+                    <h5 class="indigo-text text-darken-4">Responsive Side Navigation Layout</h5>
+                    <p>In this example below, we take the same layout from above, but we make it responsive by defining
+                        how many
+                        columns the div should take up on each screen size. Try resizing your browser and watch the
+                        layout
+                        change below.</p>
+
+                    <img src="Images/img7.PNG" alt="" class="responsive-img">
+
+                    <h5 class="indigo-text text-darken-4">More Responsive Grid Examples</h5>
+                    <div class="row">
+                        <div class="col s12 card-panel green white-text">
+                            <p>s12</p>
+                        </div>
+                        <div class="col s12 m4 l2 card-panel green white-text">
+                            <p>s12 m4</p>
+                        </div>
+                        <div class="col s12 m4 l8 card-panel green white-text">
+                            <p>s12 m4</p>
+                        </div>
+                        <div class="col s12 m4 l2 card-panel green white-text">
+                            <p>s12 m4</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6 l3 card-panel green white-text">
+                            <p>s12 m6 l3</p>
+                        </div>
+                        <div class="col s12 m6 l3 card-panel green white-text">
+                            <p>s12 m6 l3</p>
+                        </div>
+                        <div class="col s12 m6 l3 card-panel green white-text">
+                            <p>s12 m6 l3</p>
+                        </div>
+                        <div class="col s12 m6 l3 card-panel green white-text">
+                            <p>s12 m6 l3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s3">
+                <img src="Images/img6.PNG" alt="">
+                <a href="" class="green-text stock-link">ads via Carbon
+                    Build your website for just $3.88/mth. More value and performance with Namecheap.</a><br>
+                <a href="" class="red-text stock-link">
+                    <p class="center">ads via Carbon</p>
+                </a>
+                <blockquote>
+                    <p class="Left" style="font-weight: bold;">Container</p>
+                </blockquote>
+                <a href="" class="red-text stock-link-menu">
+                    <p class="Left">Introduction</p>
+                </a>
+                <a href="" class="red-text stock-link-menu">
+                    <p class="Left">Offsets</p>
+                </a>
+                <a href="" class="red-text stock-link-menu">
+                    <p class="Left">Push and Pull</p>
+                </a>
+                <a href="" class="red-text stock-link-menu">
+                    <p class="Left">Creating Layouts</p>
+                </a>
+                <a href="" class="red-text stock-link-menu">
+                    <p class="Left">Responsive Layouts</p>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div style="height: 1000px;"></div>
+    <!-- Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
